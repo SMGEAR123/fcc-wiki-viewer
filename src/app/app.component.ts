@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fcc-wiki';
-  description = 'FCC take home project'
+  description = 'FCC take home project';
 }

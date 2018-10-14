@@ -1,0 +1,8 @@
+<h2>Wikipedia Article List</h2>
+
+<ul class="article-list">
+  <li class="article" *ngFor="let article of articles">
+    <h3><a href="{{link}}">{{article.title}}</a></h3>
+    <p>{{article.description}}</p>
+  </li>
+</ul>

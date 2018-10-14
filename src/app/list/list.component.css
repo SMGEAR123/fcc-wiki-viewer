@@ -1,0 +1,7 @@
+ul.article-list {
+    list-style-type: none;
+}
+
+li.article {
+    padding: 10px;
+}
