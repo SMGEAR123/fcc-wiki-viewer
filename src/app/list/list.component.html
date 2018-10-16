@@ -1,7 +1,10 @@
+<app-search (change)="getInput($event)"></app-search>
+<p><b><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Get a random article!</a></b></p>
+
 <h2>Wikipedia Article List</h2>
 
 <ul class="article-list">
-  <li class="article" *ngFor="let article of articles">
+  <li class="article" *ngFor="let article of $articles">
 
     <app-article [content]="article"></app-article>
 

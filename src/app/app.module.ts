@@ -6,6 +6,8 @@ import { SearchComponent } from './search/search.component';
 import { ArticleComponent } from './article/article.component';
 import { ListComponent } from './list/list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { ListComponent } from './list/list.component';
     ListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule//Import after BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

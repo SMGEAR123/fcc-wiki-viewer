@@ -12,4 +12,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  search(e) {
+    e.preventDefault();
+    /* Prevents page refresh and retrieves input value */
+    let query = e.srcElement[0].value;
+    console.log(query);
+    e.srcElement[0].value = "";
+  }
+
 }
