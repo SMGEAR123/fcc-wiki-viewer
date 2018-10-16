@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WikiSearchService } from '../shared/wiki-search.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-list',
@@ -13,13 +15,14 @@ export class ListComponent implements OnInit {
   constructor(private wiki: WikiSearchService) { }
 
   ngOnInit() {
-    console.log(this.$articles);
+    // console.log(this.$articles);
   }
 
   getInput(e) {
     let query = e.target.value;
     // console.log(query);
-    this.wiki.getTestArticles(query).subscribe((data) => {
+  this.wiki.getTestArticles(query)
+    .subscribe((data) => {
       let queryObj = data;
       console.log(queryObj.query.search);
       let queryArray = queryObj.query.search;

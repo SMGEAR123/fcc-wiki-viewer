@@ -1,2 +1,3 @@
-<a href="{{content.link}}"><h3>{{content.title}}</h3></a>
-<p><b>{{content.snippet}}</b></p>
+<a href="https://en.wikipedia.org/?curid={{content.pageid}}" target="_blank"><h3>{{content.title}}</h3></a>
+<!-- Solution to HTML problem found here: https://stackoverflow.com/questions/33472297/how-to-translate-html-string-to-real-html-element-by-ng-for-in-angular-2 -->
+<p [innerHTML]="content.snippet"></p>
